@@ -30,7 +30,8 @@ NAN_METHOD(wrapMTrace) {
 	char buf[64];
 	if (info.Length() >= 1 && info[0]->IsString()) {
 		// get filename
-		String::Utf8Value utf8_value(info[0]);
+		Isolate *isolate = info.GetIsolate();
+		String::Utf8Value utf8_value(isolate, info[0]);
 		sfilename.assign(*utf8_value);
 		filename = sfilename.c_str();
 	} else {
