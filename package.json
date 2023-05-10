@@ -20,7 +20,7 @@
   "main": "index.js",
   "dependencies": {
     "easy-table": "^1.1.0",
-    "nan": "^2.1.0"
+    "nan": "^2.17.0"
   },
   "engines": {
     "node": ">=0.6.0"
